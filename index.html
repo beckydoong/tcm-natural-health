@@ -584,6 +584,55 @@
       position: relative;
     }
 
+    /* CONTACT FORM */
+    .contact { background: var(--color-surface); }
+
+    .contact-form { margin-top: 2rem; }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: 0.4rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--color-border);
+      border-radius: 0.5rem;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: var(--color-text);
+      background: var(--color-bg);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--color-teal);
+      box-shadow: 0 0 0 3px rgba(14,165,160,0.12);
+    }
+
+    .form-group textarea { resize: vertical; }
+
+    @media (max-width: 768px) {
+      .form-row { grid-template-columns: 1fr; }
+    }
+
     /* FOOTER */
     footer {
       background: #0f172a;
@@ -648,6 +697,7 @@
       <li><a href="#patients">Patients</a></li>
       <li><a href="#why">Why These Guides</a></li>
       <li><a href="#products">E-Books</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
@@ -884,23 +934,38 @@
     </div>
   </section>
 
-  <!-- CTA BANNER -->
-  <section class="cta-banner">
-    <h2>Start Your Natural Health Journey Today</h2>
-    <p>All five guides available now. Read them in an afternoon, apply them for a lifetime.</p>
-    <a href="#products" class="btn btn-primary">Browse the Collection</a>
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container" style="max-width: 600px;">
+      <p class="section-label" style="text-align: center;">Get in Touch</p>
+      <h2 class="section-title" style="text-align: center;">Questions? Reach Out.</h2>
+      <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+        <input type="hidden" name="access_key" value="5d74b9a5-1316-4b5b-96f1-73581571cfd9">
+        <input type="hidden" name="subject" content="New message from TCM Natural Health">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-accent" style="width: 100%; cursor: pointer;">Send Message</button>
+      </form>
+    </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
     <div class="footer-brand">TCM Natural Health</div>
     <p>Preserving the natural medicine legacy of Dr. Timothy Yeh</p>
-    <p style="margin-top: 0.5rem;">Based on the work of the <a href="https://www.yehcenter.com/" target="_blank" rel="noopener">Yeh Center of Natural Medicine</a> &mdash; Upland, CA</p>
-    <div class="footer-links">
-      <a href="https://www.yehcenter.com/" target="_blank" rel="noopener">YehCenter.com</a>
-      <a href="mailto:yehcenter195@gmail.com">Contact</a>
-      <a href="tel:9099466444">(909) 946-6444</a>
-    </div>
+    <p style="margin-top: 0.5rem;">Based on the work of the <a href="https://www.yehcenter.com/" target="_blank" rel="noopener">Yeh Center of Natural Medicine</a></p>
     <p style="margin-top: 1.5rem; font-size: 0.75rem; opacity: 0.4;">&copy; 2026 Yeh Center of Natural Medicine, Inc. All rights reserved.</p>
   </footer>
 
