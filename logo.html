@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TCM Natural Health Logo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: #f0f0f0;
+      font-family: 'Inter', sans-serif;
+    }
+    .canvas-wrap {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    canvas { display: block; }
+    .actions { display: flex; gap: 12px; }
+    .actions a, .actions button {
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      border: none;
+    }
+    .btn-dl { background: #1a6b4e; color: #fff; }
+    .btn-dl:hover { background: #22956b; }
+  </style>
+</head>
+<body>
+
+<div class="canvas-wrap">
+  <canvas id="logo" width="1080" height="1080"></canvas>
+</div>
+<div class="actions">
+  <a id="download" class="btn-dl" download="tcm-natural-health-logo.png">Download PNG (1080x1080)</a>
+</div>
+
+<script>
+const canvas = document.getElementById('logo');
+const ctx = canvas.getContext('2d');
+const W = 1080, H = 1080;
+
+// Background
+const bgGrad = ctx.createLinearGradient(0, 0, W, H);
+bgGrad.addColorStop(0, '#0f4c3a');
+bgGrad.addColorStop(0.35, '#1a6b4e');
+bgGrad.addColorStop(0.7, '#0d7377');
+bgGrad.addColorStop(1, '#145a8e');
+ctx.fillStyle = bgGrad;
+ctx.fillRect(0, 0, W, H);
+
+// Subtle radial glow top-right
+const glow1 = ctx.createRadialGradient(W * 0.75, H * 0.2, 0, W * 0.75, H * 0.2, 400);
+glow1.addColorStop(0, 'rgba(14,165,160,0.2)');
+glow1.addColorStop(1, 'transparent');
+ctx.fillStyle = glow1;
+ctx.fillRect(0, 0, W, H);
+
+// Subtle radial glow bottom-left
+const glow2 = ctx.createRadialGradient(W * 0.2, H * 0.8, 0, W * 0.2, H * 0.8, 350);
+glow2.addColorStop(0, 'rgba(108,60,224,0.12)');
+glow2.addColorStop(1, 'transparent');
+ctx.fillStyle = glow2;
+ctx.fillRect(0, 0, W, H);
+
+// Draw leaf function
+function drawLeaf(cx, cy, scale) {
+  ctx.save();
+  ctx.translate(cx, cy);
+  ctx.scale(scale, scale);
+
+  // Left leaf
+  ctx.beginPath();
+  ctx.moveTo(0, 170);
+  ctx.bezierCurveTo(0, 170, -90, 60, -105, -65);
+  ctx.bezierCurveTo(-120, -190, -45, -235, 0, -140);
+  ctx.bezierCurveTo(0, -140, -15, -195, 15, -225);
+  ctx.bezierCurveTo(45, -255, 90, -230, 75, -115);
+  ctx.bezierCurveTo(60, 0, 0, 170, 0, 170);
+  ctx.closePath();
+  ctx.fillStyle = 'rgba(255,255,255,0.88)';
+  ctx.fill();
+
+  // Right leaf
+  ctx.beginPath();
+  ctx.moveTo(0, 170);
+  ctx.bezierCurveTo(0, 170, 90, 60, 105, -65);
+  ctx.bezierCurveTo(120, -190, 45, -235, 0, -140);
+  ctx.bezierCurveTo(0, -140, 15, -195, -15, -225);
+  ctx.bezierCurveTo(-45, -255, -90, -230, -75, -115);
+  ctx.bezierCurveTo(-60, 0, 0, 170, 0, 170);
+  ctx.closePath();
+  ctx.fillStyle = 'rgba(255,255,255,0.65)';
+  ctx.fill();
+
+  // Center vein
+  ctx.beginPath();
+  ctx.moveTo(0, -140);
+  ctx.bezierCurveTo(-3, -50, -2, 80, 0, 170);
+  ctx.strokeStyle = 'rgba(26,107,78,0.4)';
+  ctx.lineWidth = 3;
+  ctx.lineCap = 'round';
+  ctx.stroke();
+
+  // Left veins
+  ctx.beginPath();
+  ctx.moveTo(0, -40);
+  ctx.bezierCurveTo(-20, -50, -55, -55, -80, -45);
+  ctx.strokeStyle = 'rgba(26,107,78,0.25)';
+  ctx.lineWidth = 2;
+  ctx.stroke();
+
+  ctx.beginPath();
+  ctx.moveTo(0, 30);
+  ctx.bezierCurveTo(-20, 20, -55, 15, -85, 25);
+  ctx.stroke();
+
+  ctx.beginPath();
+  ctx.moveTo(0, 95);
+  ctx.bezierCurveTo(-15, 88, -45, 82, -65, 90);
+  ctx.stroke();
+
+  // Right veins
+  ctx.beginPath();
+  ctx.moveTo(0, -40);
+  ctx.bezierCurveTo(20, -50, 55, -55, 80, -45);
+  ctx.stroke();
+
+  ctx.beginPath();
+  ctx.moveTo(0, 30);
+  ctx.bezierCurveTo(20, 20, 55, 15, 85, 25);
+  ctx.stroke();
+
+  ctx.beginPath();
+  ctx.moveTo(0, 95);
+  ctx.bezierCurveTo(15, 88, 45, 82, 65, 90);
+  ctx.stroke();
+
+  ctx.restore();
+}
+
+// Draw the leaf centered and large
+drawLeaf(W / 2, H * 0.42, 1.5);
+
+// Text: TCM Natural Health
+ctx.textAlign = 'center';
+ctx.textBaseline = 'middle';
+
+// Main title
+ctx.font = '700 72px "Playfair Display", Georgia, serif';
+ctx.fillStyle = '#ffffff';
+ctx.fillText('TCM Natural Health', W / 2, H * 0.78);
+
+// Tagline
+ctx.font = '500 26px "Inter", sans-serif';
+ctx.fillStyle = 'rgba(255,255,255,0.65)';
+ctx.letterSpacing = '4px';
+ctx.fillText('Preserving the Legacy of Natural Medicine', W / 2, H * 0.85);
+
+// Thin divider line
+ctx.beginPath();
+ctx.moveTo(W / 2 - 120, H * 0.81);
+ctx.lineTo(W / 2 + 120, H * 0.81);
+ctx.strokeStyle = 'rgba(255,255,255,0.25)';
+ctx.lineWidth = 1.5;
+ctx.stroke();
+
+// Set download link
+document.getElementById('download').href = canvas.toDataURL('image/png');
+</script>
+
+</body>
+</html>
