@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Align Your Diet with the Seasons Using TCM | TCM Natural Health</title>
+  <meta name="description" content="A quick-start introduction to seasonal eating using Traditional Chinese Medicine principles. Learn which foods to favor in every season — in under an hour.">
+  <meta property="og:title" content="Align Your Diet with the Seasons Using TCM">
+  <meta property="og:description" content="You change your wardrobe every season. Why not your diet? A quick-start guide to seasonal eating from 4,000 years of TCM wisdom.">
+  <meta property="og:image" content="https://tcmnaturalhealth.com/og-image.png">
+  <meta property="og:url" content="https://tcmnaturalhealth.com/seasonal-eating-intro.html">
+  <meta property="og:type" content="product">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --terracotta: #C4714A;
+      --terracotta-dark: #a85d3c;
+      --umber: #5C3A1E;
+      --parchment: #F5EDD8;
+      --sage: #7A8C6E;
+      --olive: #A39A5E;
+      --dusty-rose: #C4917B;
+      --cream: #FAF3E8;
+      --linen: #EDE0CC;
+      --stone: #9E8E7E;
+      --walnut: #3B2A1A;
+      --forest: #2C3B2D;
+      --font-heading: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'Jost', -apple-system, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--umber);
+      background: var(--cream);
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(250, 243, 232, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--linen);
+      z-index: 100;
+      padding: 0.85rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--walnut);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .nav-logo svg { flex-shrink: 0; }
+
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--stone);
+      font-size: 0.85rem;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--terracotta); }
+
+    /* HERO */
+    .hero {
+      padding: 9rem 2rem 5rem;
+      background: var(--walnut);
+      color: var(--parchment);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      right: -15%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(ellipse, rgba(196,113,74,0.18) 0%, transparent 60%);
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(ellipse, rgba(122,140,110,0.12) 0%, transparent 50%);
+    }
+
+    .hero-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 2rem;
+    }
+
+    .hero-badge::before,
+    .hero-badge::after {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 1px;
+      background: var(--terracotta);
+      vertical-align: middle;
+      margin: 0 12px;
+    }
+
+    .hero h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 600;
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+      color: var(--parchment);
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--dusty-rose);
+    }
+
+    .hero-subtitle {
+      font-size: 1.05rem;
+      font-weight: 300;
+      opacity: 0.75;
+      max-width: 560px;
+      margin: 0 auto 2rem;
+      line-height: 1.8;
+    }
+
+    .hero-price {
+      font-family: var(--font-heading);
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--parchment);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-price span {
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 300;
+      opacity: 0.6;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.85rem 2rem;
+      border-radius: 3px;
+      font-weight: 500;
+      font-size: 0.8rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.25s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--terracotta);
+      color: var(--cream);
+    }
+
+    .btn-primary:hover {
+      background: var(--terracotta-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(196,113,74,0.3);
+    }
+
+    .btn-lg {
+      padding: 1.1rem 2.8rem;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+    }
+
+    .trust-line {
+      margin-top: 1.25rem;
+      font-size: 0.78rem;
+      opacity: 0.5;
+      letter-spacing: 0.5px;
+    }
+
+    /* SECTIONS */
+    section { padding: 5rem 2rem; }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .container-narrow {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-family: var(--font-body);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+      color: var(--walnut);
+    }
+
+    .section-intro {
+      font-size: 1rem;
+      color: var(--umber);
+      font-weight: 300;
+      max-width: 640px;
+      line-height: 1.8;
+    }
+
+    /* PAIN SECTION */
+    .pain { background: var(--cream); }
+
+    .pain-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-top: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .pain-card {
+      background: var(--linen);
+      padding: 1.75rem;
+      border-radius: 4px;
+      border-left: 3px solid var(--dusty-rose);
+      font-size: 0.92rem;
+      color: var(--umber);
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    .pain-transition {
+      text-align: center;
+      margin-top: 2.5rem;
+    }
+
+    .pain-transition p {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--sage);
+      font-style: italic;
+    }
+
+    /* WHAT'S INSIDE */
+    .inside { background: var(--linen); }
+
+    .inside-list {
+      list-style: none;
+      margin-top: 2.5rem;
+    }
+
+    .inside-list li {
+      padding: 1.25rem 0;
+      border-bottom: 1px solid rgba(163,154,94,0.2);
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+    }
+
+    .inside-list li:last-child { border-bottom: none; }
+
+    .inside-number {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--terracotta);
+      flex-shrink: 0;
+      width: 2rem;
+      text-align: center;
+    }
+
+    .inside-content h4 {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--walnut);
+      margin-bottom: 0.25rem;
+    }
+
+    .inside-content p {
+      font-size: 0.88rem;
+      color: var(--umber);
+      font-weight: 300;
+    }
+
+    .inside-cta {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    /* KEY BENEFITS */
+    .benefits {
+      background: var(--forest);
+    }
+
+    .benefits .section-label { color: var(--terracotta); }
+    .benefits .section-title { color: var(--parchment); }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+
+    .benefit-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(245,237,216,0.1);
+      padding: 2rem;
+      border-radius: 4px;
+      transition: all 0.25s;
+    }
+
+    .benefit-card:hover {
+      background: rgba(255,255,255,0.1);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.2);
+    }
+
+    .benefit-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      color: var(--cream);
+    }
+
+    .benefit-icon-1 { background: var(--terracotta); }
+    .benefit-icon-2 { background: var(--sage); }
+    .benefit-icon-3 { background: var(--dusty-rose); }
+
+    .benefit-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      color: var(--parchment);
+    }
+
+    .benefit-card p {
+      font-size: 0.88rem;
+      color: rgba(245,237,216,0.7);
+      font-weight: 300;
+    }
+
+    .benefits-closing {
+      text-align: center;
+      margin-top: 3rem;
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--parchment);
+      font-style: italic;
+    }
+
+    /* ABOUT AUTHOR */
+    .author { background: var(--cream); }
+
+    .author-card {
+      display: flex;
+      gap: 2.5rem;
+      align-items: flex-start;
+      margin-top: 2rem;
+    }
+
+    .author-photo {
+      flex-shrink: 0;
+      width: 180px;
+    }
+
+    .author-photo img {
+      width: 100%;
+      border-radius: 4px;
+      box-shadow: 0 8px 32px rgba(59,42,26,0.15);
+    }
+
+    .author-text p {
+      font-size: 0.92rem;
+      color: var(--umber);
+      font-weight: 300;
+      margin-bottom: 1rem;
+      line-height: 1.8;
+    }
+
+    .author-stats {
+      display: flex;
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+
+    .author-stat {
+      text-align: center;
+    }
+
+    .author-stat-number {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--terracotta);
+    }
+
+    .author-stat-label {
+      font-size: 0.7rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--stone);
+    }
+
+    /* TESTIMONIALS */
+    .testimonials { background: var(--linen); }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+
+    .testimonial-card {
+      background: var(--cream);
+      padding: 2rem;
+      border-radius: 4px;
+      border: 1px solid rgba(163,154,94,0.15);
+      position: relative;
+    }
+
+    .testimonial-card::before {
+      content: '\201C';
+      font-family: var(--font-heading);
+      font-size: 4rem;
+      color: var(--terracotta);
+      opacity: 0.2;
+      position: absolute;
+      top: 0.5rem;
+      left: 1rem;
+      line-height: 1;
+    }
+
+    .testimonial-card p {
+      font-size: 0.9rem;
+      color: var(--umber);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .testimonial-author {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--walnut);
+      letter-spacing: 0.5px;
+    }
+
+    .testimonial-detail {
+      font-size: 0.72rem;
+      color: var(--stone);
+      font-weight: 300;
+    }
+
+    /* UPSELL BOX */
+    .upsell {
+      background: var(--cream);
+      padding: 4rem 2rem;
+    }
+
+    .upsell-box {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 2.5rem;
+      background: var(--linen);
+      border-radius: 4px;
+      border: 1px solid rgba(163,154,94,0.25);
+      border-left: 4px solid var(--sage);
+      text-align: center;
+    }
+
+    .upsell-box .section-label {
+      color: var(--sage);
+    }
+
+    .upsell-box h3 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--walnut);
+      margin-bottom: 1rem;
+    }
+
+    .upsell-box p {
+      font-size: 0.92rem;
+      color: var(--umber);
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
+    }
+
+    .btn-outline {
+      border: 1px solid var(--terracotta);
+      color: var(--terracotta);
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      background: var(--terracotta);
+      color: var(--cream);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(196,113,74,0.2);
+    }
+
+    /* PRICING / FINAL CTA */
+    .pricing {
+      background: var(--walnut);
+      color: var(--parchment);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pricing::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      right: -15%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(ellipse, rgba(196,113,74,0.12) 0%, transparent 60%);
+    }
+
+    .pricing::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(ellipse, rgba(122,140,110,0.08) 0%, transparent 50%);
+    }
+
+    .pricing-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .pricing .section-label { color: var(--terracotta); }
+    .pricing .section-title { color: var(--parchment); }
+
+    .pricing-price {
+      font-family: var(--font-heading);
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: var(--parchment);
+      margin: 1.5rem 0;
+    }
+
+    .pricing-includes {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .pricing-includes li {
+      font-size: 0.85rem;
+      color: rgba(245,237,216,0.7);
+      font-weight: 300;
+    }
+
+    .pricing-includes li::before {
+      content: '\2713';
+      color: var(--sage);
+      font-weight: 700;
+      margin-right: 0.5rem;
+    }
+
+    .guarantee {
+      margin-top: 1.5rem;
+      font-size: 0.82rem;
+      opacity: 0.5;
+    }
+
+    /* MORE COLLECTION */
+    .more-collection {
+      margin-top: 4rem;
+      padding-top: 3rem;
+      border-top: 1px solid rgba(245,237,216,0.1);
+    }
+
+    .more-collection h3 {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--parchment);
+      margin-bottom: 1.5rem;
+    }
+
+    .more-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .more-link {
+      display: inline-block;
+      padding: 0.6rem 1.4rem;
+      border: 1px solid rgba(245,237,216,0.2);
+      border-radius: 3px;
+      color: rgba(245,237,216,0.7);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      transition: all 0.2s;
+    }
+
+    .more-link:hover {
+      border-color: var(--terracotta);
+      color: var(--parchment);
+      background: rgba(196,113,74,0.1);
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--walnut);
+      color: rgba(245,237,216,0.5);
+      padding: 3rem 2rem;
+      text-align: center;
+      border-top: 1px solid rgba(245,237,216,0.08);
+    }
+
+    footer .footer-brand {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: var(--parchment);
+      margin-bottom: 0.5rem;
+    }
+
+    footer p { font-size: 0.82rem; margin-bottom: 0.25rem; font-weight: 300; }
+
+    footer a { color: rgba(245,237,216,0.65); text-decoration: none; transition: color 0.2s; }
+    footer a:hover { color: var(--parchment); }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav { padding: 0.75rem 1.25rem; }
+      .nav-links { display: none; }
+      section { padding: 3.5rem 1.25rem; }
+      .hero { padding: 7rem 1.25rem 4rem; }
+      .pain-grid { grid-template-columns: 1fr; }
+      .benefits-grid { grid-template-columns: 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .author-card { flex-direction: column; align-items: center; text-align: center; }
+      .author-photo { width: 140px; }
+      .author-stats { justify-content: center; }
+      .pricing-includes { flex-direction: column; align-items: center; gap: 0.75rem; }
+      .more-links { flex-direction: column; align-items: center; }
+      .upsell { padding: 3rem 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <svg width="34" height="34" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 85 C50 85 20 65 15 40 C10 15 35 5 50 25 C50 25 45 10 55 5 C65 0 80 10 75 35 C70 60 50 85 50 85Z" fill="#7A8C6E" opacity="0.85"/>
+        <path d="M50 85 C50 85 80 65 85 40 C90 15 65 5 50 25 C50 25 55 10 45 5 C35 0 20 10 25 35 C30 60 50 85 50 85Z" fill="#C4714A" opacity="0.6"/>
+        <path d="M50 25 C50 25 48 45 50 85" stroke="#FAF3E8" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+        <path d="M50 40 C50 40 38 35 28 38" stroke="#FAF3E8" stroke-width="1" stroke-linecap="round" opacity="0.3"/>
+        <path d="M50 55 C50 55 35 50 25 55" stroke="#FAF3E8" stroke-width="1" stroke-linecap="round" opacity="0.3"/>
+        <path d="M50 40 C50 40 62 35 72 38" stroke="#FAF3E8" stroke-width="1" stroke-linecap="round" opacity="0.3"/>
+        <path d="M50 55 C50 55 65 50 75 55" stroke="#FAF3E8" stroke-width="1" stroke-linecap="round" opacity="0.3"/>
+      </svg>
+      TCM Natural Health
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About Dr. Yeh</a></li>
+      <li><a href="index.html#products">E-Books</a></li>
+      <li><a href="index.html#why">Why These Guides</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-badge">Quick Start Guide &bull; PDF E-Book &bull; 16 Pages</div>
+      <h1>You Change Your Wardrobe Every Season. <em>Why Not Your Diet?</em></h1>
+      <p class="hero-subtitle">A quick-start introduction to seasonal eating using 4,000 years of Traditional Chinese Medicine wisdom. Read it in under an hour. Start making smarter food choices today.</p>
+      <div class="hero-price">$9.99 <span>/ one-time purchase</span></div>
+      <a href="#stripe-seasonal-intro" class="btn btn-primary btn-lg">Get Instant Access &mdash; $9.99</a>
+      <p class="trust-line">Instant PDF download &bull; Read on any device &bull; Lifetime access</p>
+    </div>
+  </section>
+
+  <!-- PAIN POINTS -->
+  <section class="pain">
+    <div class="container-narrow">
+      <p class="section-label">Sound Familiar?</p>
+      <h2 class="section-title">Your Diet Stays the Same. Your Body Doesn't.</h2>
+      <div class="pain-grid">
+        <div class="pain-card">You eat the same foods year-round and wonder why your energy fluctuates with the seasons. Great in summer, dragging by winter &mdash; and you can't figure out why.</div>
+        <div class="pain-card">You get colds every time the weather changes. Each seasonal transition hits you like clockwork, and you feel like your immune system never quite catches up.</div>
+        <div class="pain-card">You've heard "eat seasonally" but have no idea what that actually means in practice. Farmers market advice doesn't tell you which foods your body needs and when.</div>
+        <div class="pain-card">You want a quick, practical introduction &mdash; not a 300-page textbook. You need the essentials, clearly explained, so you can start making changes right away.</div>
+      </div>
+      <div class="pain-transition">
+        <p>There's a better way.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT'S INSIDE -->
+  <section class="inside">
+    <div class="container-narrow">
+      <p class="section-label">What's Inside</p>
+      <h2 class="section-title">16 Pages. Four Seasons. One Clear Framework.</h2>
+      <p class="section-intro">This quick-start guide gives you the essentials of seasonal eating according to Traditional Chinese Medicine &mdash; distilled into a format you can read in a single sitting.</p>
+      <ul class="inside-list">
+        <li>
+          <span class="inside-number">01</span>
+          <div class="inside-content">
+            <h4>Why Seasonal Eating Matters</h4>
+            <p>The TCM perspective on why your body needs different foods at different times of year &mdash; backed by 4,000 years of clinical observation.</p>
+          </div>
+        </li>
+        <li>
+          <span class="inside-number">02</span>
+          <div class="inside-content">
+            <h4>How Each Season Affects Your Body</h4>
+            <p>Understand the internal shifts that happen in spring, summer, fall, and winter &mdash; and why they change what your body needs.</p>
+          </div>
+        </li>
+        <li>
+          <span class="inside-number">03</span>
+          <div class="inside-content">
+            <h4>Key Foods to Favor Each Season</h4>
+            <p>Specific food recommendations for every season, chosen to support your body's natural rhythms and maintain balance.</p>
+          </div>
+        </li>
+        <li>
+          <span class="inside-number">04</span>
+          <div class="inside-content">
+            <h4>Foods to Avoid During Transitions</h4>
+            <p>The foods that work against your body during seasonal shifts &mdash; and why timing matters as much as the food itself.</p>
+          </div>
+        </li>
+        <li>
+          <span class="inside-number">05</span>
+          <div class="inside-content">
+            <h4>Simple Shifts You Can Make Right Away</h4>
+            <p>Practical, immediate changes that don't require overhauling your kitchen or your routine.</p>
+          </div>
+        </li>
+        <li>
+          <span class="inside-number">06</span>
+          <div class="inside-content">
+            <h4>Seasonal Quick-Reference</h4>
+            <p>A printable reference you can pin to your fridge &mdash; so you always know what's in season for your body.</p>
+          </div>
+        </li>
+      </ul>
+      <div class="inside-cta">
+        <a href="#stripe-seasonal-intro" class="btn btn-primary btn-lg">Get Instant Access &mdash; $9.99</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY BENEFITS -->
+  <section class="benefits">
+    <div class="container">
+      <p class="section-label">Key Takeaways</p>
+      <h2 class="section-title">What You'll Walk Away With</h2>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon benefit-icon-1">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3>Under an Hour</h3>
+          <p>Understand the "why" behind seasonal eating in a single sitting. No textbooks, no overwhelm &mdash; just the essentials you need to get started.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon benefit-icon-2">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+          </div>
+          <h3>All Four Seasons Covered</h3>
+          <p>A practical quick-reference for spring, summer, fall, and winter &mdash; what to eat, what to avoid, and why it matters for each season.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon benefit-icon-3">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <h3>Start Immediately</h3>
+          <p>Make smarter food choices starting today. No special ingredients, no complicated protocols &mdash; just clear guidance you can act on right away.</p>
+        </div>
+      </div>
+      <p class="benefits-closing">By the end of this guide, you'll never look at seasonal food the same way again.</p>
+    </div>
+  </section>
+
+  <!-- ABOUT THE AUTHOR -->
+  <section class="author">
+    <div class="container-narrow">
+      <p class="section-label">About the Author</p>
+      <h2 class="section-title">Dr. Timothy Yeh</h2>
+      <div class="author-card">
+        <div class="author-photo">
+          <img src="https://i0.wp.com/www.yehcenter.com/wp-content/uploads/2021/11/Dr-Timothy-Yeh_portrait-227x300-1.png?resize=304%2C402&ssl=1" alt="Dr. Timothy Yeh" loading="lazy">
+        </div>
+        <div class="author-text">
+          <p>Dr. Timothy Yeh was the President of the Yeh Center of Natural Medicine in Upland, California, and a recognized pioneer of natural medicine in the United States. Over more than five decades, he treated over 500,000 patients using an integrated approach that combined up to 12 types of natural medicine.</p>
+          <p>He developed the Five Step Model of Systematic Natural Medicine, beginning with his proprietary diagnostic method, Causenosis&trade; &mdash; a comprehensive examination designed to identify the root cause of illness, not just treat symptoms.</p>
+          <p>The seasonal eating principles in this guide are drawn directly from his clinical experience and the TCM framework he practiced every day.</p>
+          <div class="author-stats">
+            <div class="author-stat">
+              <div class="author-stat-number">500K+</div>
+              <div class="author-stat-label">Patients Treated</div>
+            </div>
+            <div class="author-stat">
+              <div class="author-stat-number">50+</div>
+              <div class="author-stat-label">Years of Practice</div>
+            </div>
+            <div class="author-stat">
+              <div class="author-stat-number">12</div>
+              <div class="author-stat-label">Types of Medicine</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="container">
+      <p class="section-label">What Patients Said</p>
+      <h2 class="section-title">Results That Speak for Themselves</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <p>Dr. Yeh explained how what I eat should change with the seasons, and it was like a light went on. I stopped getting sick every fall, and my energy stayed consistent year-round. Such a simple concept, but it made all the difference.</p>
+          <div class="testimonial-author">Karen M.</div>
+          <div class="testimonial-detail">Former patient, Yeh Center</div>
+        </div>
+        <div class="testimonial-card">
+          <p>I used to eat cold salads and smoothies in January and couldn't understand why I felt so run down. Dr. Yeh's seasonal food recommendations completely changed my relationship with food. My body finally feels in sync.</p>
+          <div class="testimonial-author">James P.</div>
+          <div class="testimonial-detail">Former patient, Yeh Center</div>
+        </div>
+        <div class="testimonial-card">
+          <p>What I loved about Dr. Yeh's approach was how practical it was. He didn't ask me to buy exotic ingredients. He just showed me which everyday foods to focus on at different times of year. Simple, effective, and it worked.</p>
+          <div class="testimonial-author">Linda W.</div>
+          <div class="testimonial-detail">Former patient, Yeh Center</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- UPSELL -->
+  <section class="upsell">
+    <div class="upsell-box">
+      <p class="section-label">Ready to Go Deeper?</p>
+      <h3>The Complete TCM Seasonal Eating Guide</h3>
+      <p>This quick-start guide gives you the essentials. But if you want the full picture &mdash; 70+ pages, 32 recipes, detailed food lists for every season, and advanced strategies for seasonal transitions &mdash; the complete guide covers everything in this introduction and much more.</p>
+      <a href="seasonal-eating-guide.html" class="btn btn-outline">Explore the Complete Guide</a>
+    </div>
+  </section>
+
+  <!-- PRICING / FINAL CTA -->
+  <section class="pricing">
+    <div class="pricing-inner container-narrow">
+      <p class="section-label">Get Your Copy</p>
+      <h2 class="section-title">Align Your Diet with the Seasons Using TCM</h2>
+      <div class="pricing-price">$9.99</div>
+      <ul class="pricing-includes">
+        <li>16-page PDF e-book</li>
+        <li>Instant download</li>
+        <li>Read on any device</li>
+        <li>Lifetime access</li>
+        <li>Printable quick-reference</li>
+      </ul>
+      <a href="#stripe-seasonal-intro" class="btn btn-primary btn-lg">Get Instant Access &mdash; $9.99</a>
+      <p class="guarantee">30-day satisfaction guarantee. If this guide doesn't change the way you think about seasonal eating, reach out for a full refund.</p>
+
+      <div class="more-collection">
+        <h3>More from the Collection</h3>
+        <div class="more-links">
+          <a href="digestion-gut-health.html" class="more-link">Digestion &amp; Gut Health &mdash; $17.99</a>
+          <a href="food-color-guide.html" class="more-link">Food Color Guide</a>
+          <a href="food-temperature-guide.html" class="more-link">Food Temperature Guide</a>
+          <a href="seasonal-eating-guide.html" class="more-link">Complete Seasonal Eating Guide</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-brand">TCM Natural Health</div>
+    <p>Preserving the natural medicine legacy of Dr. Timothy Yeh</p>
+    <p style="margin-top: 0.5rem;">Based on the work of the <a href="https://www.yehcenter.com/" target="_blank" rel="noopener">Yeh Center of Natural Medicine</a></p>
+    <p style="margin-top: 1.5rem; font-size: 0.72rem; opacity: 0.4;">&copy; 2026 Yeh Center of Natural Medicine, Inc. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
