@@ -190,6 +190,19 @@
       color: var(--sage); font-weight: 700;
     }
 
+    .apply-form { margin-top: 1.5rem; }
+    .apply-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .apply-field { margin-bottom: 1rem; }
+    .apply-field label { display: block; font-size: 0.7rem; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--stone); margin-bottom: 0.4rem; }
+    .apply-field input, .apply-field textarea {
+      width: 100%; padding: 0.75rem 1rem; border: 1px solid rgba(163,154,94,0.3); border-radius: 3px;
+      font-family: var(--font-body); font-size: 0.95rem; font-weight: 300; color: var(--walnut);
+      background: var(--linen); transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .apply-field input:focus, .apply-field textarea:focus { outline: none; border-color: var(--terracotta); box-shadow: 0 0 0 3px rgba(196,113,74,0.1); }
+    .apply-field textarea { resize: vertical; }
+    @media (max-width: 540px) { .apply-row { grid-template-columns: 1fr; } }
+
     .btn {
       display: inline-block;
       padding: 0.85rem 2rem;
@@ -292,7 +305,40 @@
           <li>Inclusion in our newsletter and educational content</li>
           <li>Backed by the legacy and trust of the Yeh Center</li>
         </ul>
-        <a href="index.html#contact" class="btn btn-accent">Apply to Be Featured</a>
+        <form action="https://api.web3forms.com/submit" method="POST" class="apply-form">
+          <input type="hidden" name="access_key" value="5d74b9a5-1316-4b5b-96f1-73581571cfd9">
+          <input type="hidden" name="subject" value="Practitioner application — TCM Natural Health">
+          <input type="hidden" name="from_name" value="TCM Practitioner Application">
+          <div class="apply-row">
+            <div class="apply-field">
+              <label for="apply-name">Your name</label>
+              <input type="text" id="apply-name" name="name" required>
+            </div>
+            <div class="apply-field">
+              <label for="apply-email">Email</label>
+              <input type="email" id="apply-email" name="email" required>
+            </div>
+          </div>
+          <div class="apply-row">
+            <div class="apply-field">
+              <label for="apply-clinic">Clinic / practice name</label>
+              <input type="text" id="apply-clinic" name="clinic_name">
+            </div>
+            <div class="apply-field">
+              <label for="apply-location">City, State</label>
+              <input type="text" id="apply-location" name="location" placeholder="e.g. Boulder, CO">
+            </div>
+          </div>
+          <div class="apply-field">
+            <label for="apply-website">Website (optional)</label>
+            <input type="url" id="apply-website" name="website" placeholder="https://">
+          </div>
+          <div class="apply-field">
+            <label for="apply-message">Tell us about your practice</label>
+            <textarea id="apply-message" name="message" rows="4" placeholder="Modalities, specialties, years of practice, what makes your work meaningful..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-accent" style="width: 100%; cursor: pointer; border: none;">Apply to Be Featured</button>
+        </form>
       </div>
     </div>
   </section>

@@ -51,15 +51,11 @@
     .product-card { background: var(--cream); border: 1px solid rgba(163,154,94,0.2); border-radius: 4px; overflow: hidden; transition: all 0.25s; position: relative; }
     .product-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(59,42,26,0.1); }
     .product-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--terracotta); }
-    .product-cover { height: 180px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
-    .product-cover svg { position: relative; z-index: 1; }
-    .cover-seasonal { background: linear-gradient(135deg, #2C3B2D 0%, #5C7E5E 50%, #C4714A 100%); }
-    .cover-digestion { background: linear-gradient(135deg, #7A8C6E 0%, #A39A5E 100%); }
-    .cover-temperature { background: linear-gradient(135deg, #C4714A 0%, #C4917B 50%, #5C3A1E 100%); }
-    .cover-color { background: linear-gradient(120deg, #C4714A 0%, #A39A5E 25%, #7A8C6E 50%, #5C7E8E 75%, #6A4A78 100%); }
-    .cover-intro { background: linear-gradient(135deg, #C4917B 0%, #C4714A 100%); }
-    .product-cover-flagship { width: 100%; max-width: 280px; height: 100%; min-height: 220px; }
-    @media (max-width: 768px) { .product-cover-flagship { width: 100%; max-width: none; height: 180px; } }
+    .product-cover { height: 200px; position: relative; overflow: hidden; background: var(--linen); }
+    .product-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .product-cover::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(59,42,26,0) 60%, rgba(59,42,26,0.15) 100%); pointer-events: none; }
+    .product-cover-flagship { height: 240px; }
+    @media (max-width: 768px) { .product-cover-flagship { height: 180px; } }
     .product-header { padding: 2rem 2rem 1rem; }
     .product-tag { display: inline-block; font-size: 0.6rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; padding: 0.3rem 0.85rem; border-radius: 20px; margin-bottom: 0.75rem; color: var(--terracotta); background: rgba(196,113,74,0.08); border: 1px solid rgba(196,113,74,0.2); }
     .product-header h3 { font-family: var(--font-heading); font-size: 1.4rem; font-weight: 600; margin-bottom: 0.75rem; line-height: 1.3; color: var(--walnut); }
@@ -131,44 +127,7 @@
 
         <!-- Flagship -->
         <div class="product-card" style="grid-column: 1 / -1;">
-          <div class="product-cover cover-seasonal">
-            <svg width="220" height="120" viewBox="0 0 220 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Spring leaf -->
-              <g transform="translate(20,30)">
-                <path d="M30 0 C45 15 45 45 30 60 C15 45 15 15 30 0 Z" fill="#F5EDD8" opacity="0.9"/>
-                <path d="M30 0 L30 60" stroke="#7A8C6E" stroke-width="1.5" opacity="0.5"/>
-              </g>
-              <!-- Summer sun -->
-              <g transform="translate(80,30)">
-                <circle cx="30" cy="30" r="18" fill="#F5EDD8" opacity="0.9"/>
-                <g stroke="#F5EDD8" stroke-width="2" stroke-linecap="round" opacity="0.7">
-                  <line x1="30" y1="2" x2="30" y2="10"/>
-                  <line x1="30" y1="50" x2="30" y2="58"/>
-                  <line x1="2" y1="30" x2="10" y2="30"/>
-                  <line x1="50" y1="30" x2="58" y2="30"/>
-                  <line x1="10" y1="10" x2="16" y2="16"/>
-                  <line x1="44" y1="44" x2="50" y2="50"/>
-                  <line x1="10" y1="50" x2="16" y2="44"/>
-                  <line x1="44" y1="16" x2="50" y2="10"/>
-                </g>
-              </g>
-              <!-- Autumn leaf -->
-              <g transform="translate(140,30)">
-                <path d="M30 5 C42 18 42 38 30 55 C18 38 18 18 30 5 Z" fill="#F5EDD8" opacity="0.9"/>
-                <path d="M30 5 L30 55 M30 18 L20 22 M30 18 L40 22 M30 32 L18 38 M30 32 L42 38" stroke="#C4714A" stroke-width="1" opacity="0.7"/>
-              </g>
-              <!-- Winter star -->
-              <g transform="translate(180,30)">
-                <g stroke="#F5EDD8" stroke-width="2" stroke-linecap="round" opacity="0.85">
-                  <line x1="20" y1="6" x2="20" y2="54"/>
-                  <line x1="6" y1="30" x2="34" y2="30"/>
-                  <line x1="10" y1="14" x2="30" y2="46"/>
-                  <line x1="30" y1="14" x2="10" y2="46"/>
-                </g>
-              </g>
-            </svg>
-          </div>
-          <div class="product-header" style="display: grid; grid-template-columns: 1fr auto; align-items: start; gap: 2rem;">
+          <div class="product-cover cover-seasonal product-cover-flagship"><img src="https://images.unsplash.com/photo-1729577662883-d4095974d4bc?w=1200&auto=format&fit=crop&q=80" alt="Group of pumpkins arranged on a rustic wooden table" loading="lazy"></div><div class="product-header" style="display: grid; grid-template-columns: 1fr auto; align-items: start; gap: 2rem;">
             <div>
               <div class="product-tag" style="background: rgba(44,59,45,0.1); color: var(--forest); border-color: rgba(44,59,45,0.3);">Flagship Guide &middot; 70+ Pages &middot; 32 Recipes</div>
               <h3 style="font-size: 1.6rem;">The Complete TCM Seasonal Eating Guide</h3>
@@ -195,22 +154,7 @@
         </div>
 
         <div class="product-card">
-          <div class="product-cover cover-digestion">
-            <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Steam wisps -->
-              <path d="M40 25 Q35 18 42 12 Q49 18 44 25" stroke="#F5EDD8" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
-              <path d="M58 22 Q53 14 60 8 Q67 14 62 22" stroke="#F5EDD8" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
-              <path d="M76 25 Q71 18 78 12 Q85 18 80 25" stroke="#F5EDD8" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
-              <!-- Bowl -->
-              <path d="M20 50 L100 50 Q98 95 60 100 Q22 95 20 50 Z" fill="#F5EDD8" opacity="0.92"/>
-              <ellipse cx="60" cy="50" rx="40" ry="6" fill="#3B2A1A" opacity="0.3"/>
-              <!-- Herbs floating -->
-              <ellipse cx="48" cy="52" rx="6" ry="3" fill="#7A8C6E" opacity="0.8"/>
-              <ellipse cx="68" cy="52" rx="6" ry="3" fill="#7A8C6E" opacity="0.8"/>
-              <circle cx="58" cy="51" r="2" fill="#C4714A" opacity="0.7"/>
-            </svg>
-          </div>
-          <div class="product-header">
+          <div class="product-cover cover-digestion"><img src="https://images.unsplash.com/photo-1572171579626-e79450374587?w=1200&auto=format&fit=crop&q=80" alt="Bowl of hearty bone broth with vegetables and herbs" loading="lazy"></div><div class="product-header">
             <div class="product-tag">Bestseller &middot; 64 Pages</div>
             <h3>Healing Foods for Digestion &amp; Gut Health</h3>
             <div class="product-price">$17.99 <span>/ PDF e-book</span></div>
@@ -228,31 +172,7 @@
         </div>
 
         <div class="product-card">
-          <div class="product-cover cover-temperature">
-            <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Thermometer body -->
-              <rect x="52" y="20" width="16" height="60" rx="8" fill="#F5EDD8" opacity="0.95"/>
-              <circle cx="60" cy="88" r="14" fill="#F5EDD8" opacity="0.95"/>
-              <!-- Mercury -->
-              <rect x="56" y="40" width="8" height="40" fill="#3B2A1A" opacity="0.85"/>
-              <circle cx="60" cy="88" r="10" fill="#3B2A1A" opacity="0.85"/>
-              <!-- Tick marks -->
-              <line x1="44" y1="32" x2="50" y2="32" stroke="#F5EDD8" stroke-width="1.5" opacity="0.7"/>
-              <line x1="44" y1="44" x2="50" y2="44" stroke="#F5EDD8" stroke-width="1.5" opacity="0.7"/>
-              <line x1="44" y1="56" x2="50" y2="56" stroke="#F5EDD8" stroke-width="1.5" opacity="0.7"/>
-              <line x1="44" y1="68" x2="50" y2="68" stroke="#F5EDD8" stroke-width="1.5" opacity="0.7"/>
-              <!-- Flame -->
-              <path d="M22 70 Q15 60 22 48 Q26 56 30 50 Q32 60 28 70 Q25 75 22 70 Z" fill="#F5EDD8" opacity="0.85"/>
-              <!-- Snowflake -->
-              <g transform="translate(85,55)" stroke="#F5EDD8" stroke-width="1.5" stroke-linecap="round" opacity="0.85">
-                <line x1="12" y1="2" x2="12" y2="22"/>
-                <line x1="2" y1="12" x2="22" y2="12"/>
-                <line x1="5" y1="5" x2="19" y2="19"/>
-                <line x1="19" y1="5" x2="5" y2="19"/>
-              </g>
-            </svg>
-          </div>
-          <div class="product-header">
+          <div class="product-cover cover-temperature"><img src="https://images.unsplash.com/photo-1727060664400-c6751d5db16d?w=1200&auto=format&fit=crop&q=80" alt="Cinnamon sticks and star anise warming spices" loading="lazy"></div><div class="product-header">
             <div class="product-tag">New Release &middot; 35 Pages</div>
             <h3>The Complete TCM Food Temperature Guide</h3>
             <div class="product-price">$14.99 <span>/ PDF e-book</span></div>
@@ -270,19 +190,7 @@
         </div>
 
         <div class="product-card">
-          <div class="product-cover cover-color">
-            <svg width="200" height="120" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- 5 colored circles representing the 5 elements/colors -->
-              <circle cx="30" cy="60" r="22" fill="#7A8C6E" opacity="0.95"/>
-              <circle cx="70" cy="60" r="22" fill="#C4714A" opacity="0.95"/>
-              <circle cx="110" cy="60" r="22" fill="#E8C36F" opacity="0.95"/>
-              <circle cx="150" cy="60" r="22" fill="#F5EDD8" opacity="0.95"/>
-              <circle cx="190" cy="60" r="22" fill="#3B2A1A" opacity="0.85"/>
-              <!-- Subtle ring around them -->
-              <path d="M8 60 Q100 30 192 60" stroke="#F5EDD8" stroke-width="1" fill="none" opacity="0.3"/>
-            </svg>
-          </div>
-          <div class="product-header">
+          <div class="product-cover cover-color"><img src="https://images.unsplash.com/photo-1685930117878-4b6e76e1de42?w=1200&auto=format&fit=crop&q=80" alt="Colorful rainbow of fresh fruits and vegetables at market" loading="lazy"></div><div class="product-header">
             <div class="product-tag">New Release &middot; 30 Pages</div>
             <h3>The TCM Food Color Guide</h3>
             <div class="product-price">$9.99 <span>/ PDF e-book</span></div>
@@ -300,20 +208,7 @@
         </div>
 
         <div class="product-card">
-          <div class="product-cover cover-intro">
-            <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Branch -->
-              <path d="M20 100 Q40 80 60 60 Q80 40 100 25" stroke="#F5EDD8" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-              <!-- 4 leaves at different stages -->
-              <ellipse cx="40" cy="80" rx="8" ry="14" fill="#F5EDD8" opacity="0.92" transform="rotate(-30 40 80)"/>
-              <ellipse cx="60" cy="60" rx="9" ry="16" fill="#F5EDD8" opacity="0.85" transform="rotate(-20 60 60)"/>
-              <ellipse cx="78" cy="42" rx="8" ry="14" fill="#F5EDD8" opacity="0.78" transform="rotate(-10 78 42)"/>
-              <ellipse cx="95" cy="28" rx="6" ry="10" fill="#F5EDD8" opacity="0.7"/>
-              <!-- Sun in corner -->
-              <circle cx="100" cy="100" r="8" fill="#F5EDD8" opacity="0.9"/>
-            </svg>
-          </div>
-          <div class="product-header">
+          <div class="product-cover cover-intro"><img src="https://images.unsplash.com/photo-1741517802684-ba07c444a5d2?w=1200&auto=format&fit=crop&q=80" alt="Close-up of fresh ginger root with knobby texture" loading="lazy"></div><div class="product-header">
             <div class="product-tag">Quick Start &middot; 16 Pages</div>
             <h3>Align Your Diet with the Seasons Using TCM</h3>
             <div class="product-price">$9.99 <span>/ PDF e-book</span></div>
