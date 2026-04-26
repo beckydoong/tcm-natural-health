@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Actually Happens During an Acupuncture Session? | TCM Natural Health</title>
+  <meta name="description" content="An honest, demystified guide to your first acupuncture visit — what the practitioner asks, what to expect on the table, and what sensations are normal.">
+  <meta property="og:title" content="What Actually Happens During an Acupuncture Session?">
+  <meta property="og:description" content="A clear, plainspoken walkthrough of an acupuncture appointment, written for first-timers and skeptics.">
+  <meta property="og:type" content="article">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --terracotta: #C4714A; --terracotta-dark: #a85d3c;
+      --umber: #5C3A1E; --parchment: #F5EDD8;
+      --sage: #7A8C6E; --olive: #A39A5E;
+      --dusty-rose: #C4917B; --cream: #FAF3E8;
+      --linen: #EDE0CC; --stone: #9E8E7E;
+      --walnut: #3B2A1A; --forest: #2C3B2D;
+      --font-heading: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'Jost', -apple-system, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--umber); background: var(--cream); line-height: 1.7; font-weight: 300; }
+    nav { position: fixed; top: 0; width: 100%; background: rgba(250, 243, 232, 0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--linen); z-index: 100; padding: 0.85rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+    .nav-logo { font-family: var(--font-heading); font-size: 1.3rem; font-weight: 600; color: var(--walnut); text-decoration: none; display: flex; align-items: center; gap: 0.6rem; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--stone); font-size: 0.85rem; font-weight: 400; letter-spacing: 0.5px; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--terracotta); }
+
+    .page-hero { padding: 9rem 2rem 5rem; background: var(--walnut); color: var(--parchment); text-align: center; position: relative; overflow: hidden; }
+    .page-hero::before { content: ''; position: absolute; top: -40%; right: -15%; width: 600px; height: 600px; background: radial-gradient(ellipse, rgba(196,113,74,0.18) 0%, transparent 60%); }
+    .page-hero::after { content: ''; position: absolute; bottom: -30%; left: -10%; width: 500px; height: 500px; background: radial-gradient(ellipse, rgba(122,140,110,0.12) 0%, transparent 50%); }
+    .page-hero-inner { max-width: 720px; margin: 0 auto; position: relative; z-index: 1; }
+    .hero-badge { display: inline-block; font-size: 0.65rem; font-weight: 500; letter-spacing: 0.3em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 2rem; }
+    .hero-badge::before, .hero-badge::after { content: ''; display: inline-block; width: 24px; height: 1px; background: var(--terracotta); vertical-align: middle; margin: 0 12px; }
+    .page-hero h1 { font-family: var(--font-heading); font-size: clamp(2.2rem, 4.5vw, 3.2rem); font-weight: 600; line-height: 1.18; margin-bottom: 1.25rem; color: var(--parchment); }
+    .page-hero h1 em { font-style: italic; color: var(--dusty-rose); }
+    .page-hero .byline { font-size: 0.82rem; opacity: 0.7; letter-spacing: 0.5px; }
+
+    .article-body { max-width: 720px; margin: 0 auto; padding: 4rem 1.5rem 2rem; }
+    .article-body p { font-size: 1.05rem; line-height: 1.8; color: var(--umber); font-weight: 300; margin-bottom: 1.4rem; }
+    .article-body h2 { font-family: var(--font-heading); font-size: 1.8rem; color: var(--walnut); font-weight: 600; margin-top: 2.5rem; margin-bottom: 1rem; line-height: 1.25; }
+    .article-body h3 { font-family: var(--font-heading); font-size: 1.35rem; color: var(--walnut); font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; line-height: 1.3; }
+    .article-body ul, .article-body ol { margin: 0 0 1.4rem 0; padding-left: 0; list-style: none; }
+    .article-body ul li { position: relative; padding-left: 1.5rem; margin-bottom: 0.55rem; font-size: 1.02rem; line-height: 1.75; }
+    .article-body ul li::before { content: ''; position: absolute; left: 0; top: 0.7em; width: 6px; height: 6px; background: var(--sage); border-radius: 50%; }
+    .article-body ol { counter-reset: olc; padding-left: 0; }
+    .article-body ol li { counter-increment: olc; position: relative; padding-left: 2rem; margin-bottom: 0.55rem; font-size: 1.02rem; line-height: 1.75; }
+    .article-body ol li::before { content: counter(olc) '.'; position: absolute; left: 0; top: 0; color: var(--terracotta); font-weight: 500; font-family: var(--font-heading); }
+    .pull-quote { border-left: 3px solid var(--terracotta); background: var(--parchment); padding: 1.25rem 1.5rem; margin: 2rem 0; font-family: var(--font-heading); font-style: italic; font-size: 1.3rem; line-height: 1.5; color: var(--walnut); }
+
+    .next-section { background: var(--linen); padding: 4rem 1.5rem; }
+    .next-inner { max-width: 1100px; margin: 0 auto; }
+    .next-label { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.25em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 0.75rem; }
+    .next-title { font-family: var(--font-heading); font-size: 1.8rem; color: var(--walnut); font-weight: 600; margin-bottom: 2rem; }
+    .next-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
+    .next-card { background: var(--cream); border: 1px solid rgba(163,154,94,0.2); border-radius: 4px; padding: 1.75rem; transition: all 0.25s; text-decoration: none; color: inherit; display: block; }
+    .next-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(59,42,26,0.1); }
+    .next-card .tag { display: inline-block; font-size: 0.6rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; padding: 0.3rem 0.85rem; border-radius: 20px; color: var(--terracotta); background: rgba(196,113,74,0.08); border: 1px solid rgba(196,113,74,0.2); margin-bottom: 0.75rem; }
+    .next-card h3 { font-family: var(--font-heading); font-size: 1.2rem; color: var(--walnut); font-weight: 600; margin-bottom: 0.5rem; line-height: 1.3; }
+    .next-card p { font-size: 0.88rem; color: var(--umber); margin-bottom: 0.75rem; }
+    .next-card .arrow { font-size: 0.72rem; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: var(--terracotta); }
+    .ebook-card { background: var(--walnut); color: var(--parchment); }
+    .ebook-card h3 { color: var(--parchment); }
+    .ebook-card p { color: rgba(245,237,216,0.75); }
+    .ebook-card .tag { color: var(--dusty-rose); border-color: rgba(196,145,123,0.4); background: rgba(196,145,123,0.1); }
+    .ebook-card .arrow { color: var(--dusty-rose); }
+
+    footer { background: var(--walnut); color: rgba(245,237,216,0.5); padding: 3rem 2rem; text-align: center; }
+    footer .footer-brand { font-family: var(--font-heading); font-size: 1.3rem; font-weight: 400; color: var(--parchment); margin-bottom: 0.5rem; }
+    footer p { font-size: 0.82rem; margin-bottom: 0.25rem; font-weight: 300; }
+    footer a { color: rgba(245,237,216,0.65); text-decoration: none; }
+    footer a:hover { color: var(--parchment); }
+    .footer-links { margin-top: 1rem; display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; }
+
+    @media (max-width: 768px) {
+      nav { padding: 0.75rem 1.25rem; }
+      .nav-links { display: none; }
+      .page-hero { padding: 7rem 1.25rem 4rem; }
+      .article-body { padding: 3rem 1.25rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="../index.html" class="nav-logo">
+      <svg width="34" height="34" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 85 C50 85 20 65 15 40 C10 15 35 5 50 25 C50 25 45 10 55 5 C65 0 80 10 75 35 C70 60 50 85 50 85Z" fill="#7A8C6E" opacity="0.85"/>
+        <path d="M50 85 C50 85 80 65 85 40 C90 15 65 5 50 25 C50 25 55 10 45 5 C35 0 20 10 25 35 C30 60 50 85 50 85Z" fill="#C4714A" opacity="0.6"/>
+        <path d="M50 25 C50 25 48 45 50 85" stroke="#FAF3E8" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+      </svg>
+      TCM Natural Health
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../learn.html" class="active">Learn</a></li>
+      <li><a href="../practitioners.html">Find a Practitioner</a></li>
+      <li><a href="../resources.html">Resources</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <div class="hero-badge">Treatments</div>
+      <h1>What Actually Happens During an <em>Acupuncture</em> Session?</h1>
+      <p class="byline">By the Yeh Center Editorial Team &middot; Published April 24, 2026</p>
+    </div>
+  </section>
+
+  <article class="article-body">
+    <p>The needle sits on a tray, sealed in a sterile sleeve, looking nothing like a needle. It is the diameter of a human hair — three or four times thinner than the needle a phlebotomist uses for blood. You will not see a syringe. You will not feel the kind of pinch you brace for at a vaccination. The first thing most first-time patients say, after the first needle goes in, is "wait, that was it?"</p>
+
+    <p>What follows is a plain walkthrough of a real acupuncture visit, drawn from how Dr. Timothy Yeh and the practitioners trained in his methods structured a session. There is no mysticism in it. The mechanics are surprisingly orderly.</p>
+
+    <h2>Before you arrive</h2>
+
+    <p>Eat something light an hour or two beforehand — a needle on an empty stomach can leave you lightheaded, and a heavy meal makes the body sluggish. Wear loose clothing that pushes up easily above the elbows and knees; many points are on the forearms, lower legs, and feet. If you wear tight jeans, you may end up under a sheet in your underwear, which is also fine and entirely standard. Skip caffeine in the hour before. Skip alcohol that day.</p>
+
+    <p>Bring a list of medications, supplements, and any prior diagnoses. A good practitioner reads the whole picture, not just the chief complaint.</p>
+
+    <h2>The intake: what they actually ask</h2>
+
+    <p>The first visit is mostly conversation. Expect 30 to 45 minutes of questions, many of which will surprise you. The practitioner is reading patterns, not symptoms. The questions Dr. Yeh's clinic walked through, and that any thorough TCM intake will cover:</p>
+
+    <ul>
+      <li>Your sleep — when you fall asleep, when you wake, how easily, what time you wake if you do.</li>
+      <li>Your digestion — appetite, bowel movements (yes, in detail), bloating, heartburn, the timing.</li>
+      <li>Your energy — when it is highest, when it crashes, how you feel after meals.</li>
+      <li>Temperature — do you run hot, cold, or swing.</li>
+      <li>Sweat — where, when, how much.</li>
+      <li>Thirst and what you crave.</li>
+      <li>Your menstrual cycle, if applicable. Length, flow, pain, regularity.</li>
+      <li>Stress sources, emotional patterns, what gets you wound up, what calms you down.</li>
+      <li>Pain — where, what kind, what makes it better or worse.</li>
+    </ul>
+
+    <p>Some of these questions feel almost intrusive. They are not. In TCM diagnosis, a 3 AM wake-up tells the practitioner one thing about the liver. A consistent loose morning stool tells them something else about the spleen. A craving for cold drinks versus warm tells them about internal temperature. A complete picture comes from the pattern, not any single answer.</p>
+
+    <h2>The tongue and the pulse</h2>
+
+    <p>You will be asked to stick out your tongue. The practitioner will look at it for a few seconds and probably make a note. The tongue in TCM is treated as a small map: its color, shape, coating, moisture, and any cracks or marks suggest what is happening internally. A pale tongue with a thin coat tells one story; a red tongue with a thick yellow coat tells another. It is not magic. It is pattern recognition built up over a few thousand years of careful watching.</p>
+
+    <p>Then comes the pulse. The practitioner places three fingers on each of your wrists and presses at three depths — superficial, middle, and deep. They are reading not just the rate, which a watch can do, but the quality. Wiry. Slippery. Thready. Floating. Sinking. Each describes a specific texture and corresponds to a specific pattern. This takes a minute or two on each side. Stay quiet during it. You will feel the practitioner's attention narrow.</p>
+
+    <div class="pull-quote">A trained acupuncturist can sometimes tell you what is wrong before you have finished telling them — not because they are guessing, but because the pulse and tongue have already spoken.</div>
+
+    <h2>The needles</h2>
+
+    <p>You lie face up or face down on a padded table, draped with a sheet. The room is usually quiet, often warm, sometimes with soft music. The practitioner cleans each point with alcohol and inserts a sterile, single-use needle. A typical session uses anywhere from six to twenty needles. Common locations: the forearms, hands, lower legs, feet, abdomen, lower back, and sometimes the scalp or ears.</p>
+
+    <p>Sensations to expect:</p>
+
+    <ul>
+      <li>Most insertions feel like nothing or like a faint tap.</li>
+      <li>A few may feel like a brief pinch or pulse, then settle.</li>
+      <li>Some points produce a heavy, dull, spreading sensation called <em>de qi</em> — the technical word for the body recognizing the needle. It is a sign the point is working, not a sign of injury.</li>
+      <li>Occasionally a twinge, a brief electric feeling, or warmth.</li>
+    </ul>
+
+    <p>If anything sharp persists for more than a few seconds, tell the practitioner. They will adjust. A good acupuncturist watches your face during insertion and will usually catch discomfort before you mention it.</p>
+
+    <h2>The retention</h2>
+
+    <p>Once the needles are placed, you rest with them for 20 to 30 minutes. The lights dim. The practitioner steps out. This is where the strangest thing about acupuncture happens: most people fall asleep, or fall into a state that is not quite sleep — a deep, slow, almost gravitational calm. Patients who arrive irritable often leave the table feeling something close to peace. The mechanism is debated. The reliability of the effect is not.</p>
+
+    <p>You may feel limbs go heavy. You may feel internal shifts — a gurgle in the stomach, a sigh that wants to come out, an unexpected tear. These are normal. The practitioner often returns once or twice during the retention to adjust needles, sometimes to gently turn one to deepen its effect.</p>
+
+    <h2>Removal and after</h2>
+
+    <p>Removal is quick and almost always painless. Each needle goes into a sharps container. The practitioner may give you take-home advice: a food adjustment, a sleep timing change, a herbal tea, a few stretches. They may schedule follow-ups; most conditions respond best to a course of weekly visits for four to eight weeks, then a maintenance cadence.</p>
+
+    <p>Drink water on your way home. Avoid heavy exercise and alcohol that day. Some people feel a wave of fatigue in the evening — the body has done real work and is processing. By the next morning, most feel clearer-headed and a bit lighter.</p>
+
+    <h2>What conditions are commonly treated</h2>
+
+    <p>Acupuncture has the strongest evidence base, and the most consistent clinical results, in the following areas:</p>
+
+    <ul>
+      <li>Chronic pain — back, neck, knees, headaches, migraines.</li>
+      <li>Digestive issues — IBS, reflux, nausea, chronic constipation.</li>
+      <li>Sleep disorders, especially the kind described in the previous article on the 3 AM wake-up.</li>
+      <li>Menstrual and fertility concerns — irregular cycles, PMS, support during IVF cycles.</li>
+      <li>Stress, anxiety, and the physical patterns that come with both.</li>
+      <li>Chemotherapy side effects, particularly nausea — increasingly used alongside oncology care.</li>
+      <li>Allergies and sinus congestion.</li>
+      <li>Recovery from injury and post-surgical pain.</li>
+    </ul>
+
+    <p>It is not a silver bullet, and a thoughtful practitioner will tell you so. Some conditions respond beautifully in three or four visits. Some take a longer commitment. Some are better referred elsewhere — a good acupuncturist sends patients to physicians, physical therapists, psychotherapists, and surgeons all the time, because the goal is the patient's health, not loyalty to one tool.</p>
+
+    <h2>How to choose a practitioner</h2>
+
+    <p>Look for a licensed acupuncturist (L.Ac.) in the United States, which requires a master's-level degree from an accredited program plus board certification through the NCCAOM. State licensing varies; most states regulate the profession. A few additional markers of a good fit:</p>
+
+    <ul>
+      <li>They take a real intake. If your first visit lasts 15 minutes, find someone else.</li>
+      <li>They look at your tongue and read your pulse without rushing.</li>
+      <li>They explain their reasoning in plain language.</li>
+      <li>They give you something to do between visits — a food adjustment, a movement, a herbal tea — not just rebooking.</li>
+      <li>They are willing to refer you out if your case is outside their scope.</li>
+    </ul>
+
+    <p>The first visit usually runs 60 to 90 minutes; follow-ups are typically 45 to 60. Costs vary widely by region, from around $75 to $200 per visit; some insurance plans now cover acupuncture, particularly for pain. Many community acupuncture clinics offer sliding-scale visits in a shared-room format for $20 to $50, which is a reasonable way to try the modality without a big commitment.</p>
+
+    <p>You do not need to believe in anything to benefit from a session. You only need to show up, eat something first, wear loose clothes, and let yourself be still for an hour. The needles will do their part. The body, given the chance, tends to do the rest.</p>
+  </article>
+
+  <section class="next-section">
+    <div class="next-inner">
+      <p class="next-label">What to read next</p>
+      <h2 class="next-title">Continue your reading</h2>
+      <div class="next-grid">
+        <a href="yin-yang-everyday-life.html" class="next-card">
+          <span class="tag">Foundations</span>
+          <h3>Understanding Yin and Yang in Everyday Life</h3>
+          <p>The diagnostic framework an acupuncturist is using when they read your tongue and pulse.</p>
+          <span class="arrow">Read article &rarr;</span>
+        </a>
+        <a href="wake-up-at-3am-tcm.html" class="next-card">
+          <span class="tag">Conditions</span>
+          <h3>Why You Wake at 3 AM</h3>
+          <p>One of the most common things acupuncture patients come in for — and the framework the practitioner is using to read it.</p>
+          <span class="arrow">Read article &rarr;</span>
+        </a>
+        <a href="../practitioners.html" class="next-card ebook-card">
+          <span class="tag">Directory</span>
+          <h3>Find a Practitioner</h3>
+          <p>A directory of TCM practitioners trained in or aligned with Dr. Yeh's clinical approach. Start with a practitioner you trust.</p>
+          <span class="arrow">Browse directory &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-brand">TCM Natural Health</div>
+    <p>Preserving the natural medicine legacy of Dr. Timothy Yeh</p>
+    <p style="margin-top: 0.5rem;">Based on the work of the <a href="https://www.yehcenter.com/" target="_blank" rel="noopener">Yeh Center of Natural Medicine</a></p>
+    <div class="footer-links">
+      <a href="../index.html">Home</a>
+      <a href="../learn.html">Learn</a>
+      <a href="../practitioners.html">Practitioners</a>
+      <a href="../resources.html">Resources</a>
+      <a href="../index.html#contact">Contact</a>
+    </div>
+    <p style="margin-top: 1.5rem; font-size: 0.72rem; opacity: 0.4;">&copy; 2026 Yeh Center of Natural Medicine, Inc. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
