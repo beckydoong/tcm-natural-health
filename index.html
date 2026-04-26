@@ -185,6 +185,33 @@
       text-align: center;
       position: relative;
       overflow: hidden;
+      min-height: 540px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      opacity: 0.55;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(59,42,26,0.55) 0%, rgba(59,42,26,0.78) 100%);
+      z-index: 1;
+    }
+
+    /* Hide video on mobile to save bandwidth, fall back to gradient */
+    @media (max-width: 768px) {
+      .hero-video { display: none; }
+      .hero-overlay { display: none; }
     }
 
     .hero::before {
@@ -192,6 +219,7 @@
       top: -40%; right: -15%;
       width: 600px; height: 600px;
       background: radial-gradient(ellipse, rgba(196,113,74,0.18) 0%, transparent 60%);
+      z-index: 2;
     }
 
     .hero::after {
@@ -199,13 +227,18 @@
       bottom: -30%; left: -10%;
       width: 500px; height: 500px;
       background: radial-gradient(ellipse, rgba(122,140,110,0.12) 0%, transparent 50%);
+      z-index: 2;
     }
 
     .hero-inner {
       max-width: 820px;
       margin: 0 auto;
-      position: relative; z-index: 1;
+      position: relative; z-index: 3;
     }
+
+    /* Make headline more readable over video — slight text-shadow for contrast */
+    .hero h1 { text-shadow: 0 2px 24px rgba(0,0,0,0.35); }
+    .hero p { text-shadow: 0 1px 12px rgba(0,0,0,0.4); }
 
     .hero-badge {
       display: inline-block;
@@ -474,6 +507,81 @@
     .yeh-way-box p { font-size: 0.92rem; color: var(--umber); margin-bottom: 0.75rem; font-weight: 300; }
     .yeh-way-box p:last-child { margin-bottom: 0; }
 
+    .yeh-quote {
+      margin: 2rem 0;
+      padding: 2rem 2rem 1.5rem;
+      background: var(--cream);
+      border-left: 3px solid var(--terracotta);
+      border-radius: 4px;
+    }
+    .yeh-quote p {
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-size: 1.25rem;
+      line-height: 1.5;
+      color: var(--walnut);
+      margin-bottom: 0.75rem;
+      font-weight: 400;
+    }
+    .yeh-quote cite {
+      display: block;
+      font-family: var(--font-body);
+      font-style: normal;
+      font-size: 0.78rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--stone);
+    }
+
+    .yeh-secondary-photo {
+      margin: 2rem 0;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .yeh-secondary-photo img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      border-radius: 4px;
+    }
+    .yeh-secondary-photo .photo-caption {
+      font-size: 0.82rem;
+      color: var(--stone);
+      font-style: italic;
+      margin-top: 0.6rem;
+      line-height: 1.5;
+    }
+
+    .featured-in {
+      margin-top: 2rem;
+      padding: 1.75rem 2rem;
+      background: var(--cream);
+      border-radius: 4px;
+      border: 1px solid rgba(163,154,94,0.2);
+    }
+    .featured-in ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .featured-in li {
+      font-size: 0.88rem;
+      color: var(--umber);
+      padding: 0.4rem 0 0.4rem 1.25rem;
+      position: relative;
+      font-weight: 300;
+      border-bottom: 1px solid rgba(163,154,94,0.15);
+    }
+    .featured-in li:last-child { border-bottom: none; }
+    .featured-in li::before {
+      content: '\2014';
+      position: absolute;
+      left: 0;
+      color: var(--terracotta);
+      font-weight: 400;
+    }
+
     /* PATIENTS */
     .patients { background: var(--cream); }
     .patients-content { max-width: 800px; }
@@ -583,6 +691,10 @@
 
   <!-- HERO -->
   <section class="hero">
+    <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="https://images.unsplash.com/photo-1727060664400-c6751d5db16d?w=1600&auto=format&fit=crop&q=80" aria-hidden="true">
+      <source src="https://videos.pexels.com/video-files/29532362/12712354_1440_2560_30fps.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay" aria-hidden="true"></div>
     <div class="hero-inner">
       <div class="hero-badge">Education &middot; Practitioners &middot; Resources</div>
       <h1>Your Trusted Home for <em>Traditional Chinese Medicine</em></h1>
@@ -784,6 +896,28 @@
             <p class="section-label" style="color: var(--sage);">The Yeh Way&trade;</p>
             <p>Dr. Yeh developed the <strong>Five Step Model of Systematic Natural Medicine</strong>, starting with his proprietary diagnostic method, <strong>Causenosis&trade;</strong> &mdash; a 360-point comprehensive examination using 25 diagnostic methods to evaluate body, mind, and spirit.</p>
             <p>His treatments combined up to <strong>12 types of natural medicine</strong> &mdash; including acupuncture, herbal medicine, aromatherapy, food medicine, and more &mdash; tailored to each individual patient.</p>
+          </div>
+
+          <blockquote class="yeh-quote">
+            <p>"Each person is different, every body's needs are different, each illness is caused by different reasons, so the prescriptions vary with every patient."</p>
+            <cite>&mdash; Dr. Timothy Yeh</cite>
+          </blockquote>
+
+          <div class="yeh-secondary-photo">
+            <img src="https://images.unsplash.com/photo-1727060664400-c6751d5db16d?w=900&auto=format&fit=crop&q=80" alt="Cinnamon sticks and star anise — traditional herbal medicine ingredients" loading="lazy">
+            <p class="photo-caption">Dr. Yeh personally traveled the world to source premium herbs traced to formulations with over 4,000 years of historical use.</p>
+          </div>
+
+          <div class="featured-in">
+            <p class="section-label" style="color: var(--terracotta);">Recognition</p>
+            <ul>
+              <li><strong>2004 Physician of the Year</strong> &middot; Physicians' Advisory Board</li>
+              <li>Featured in <em>Who's Who in California</em></li>
+              <li>Featured in <em>Who's Who in the World</em></li>
+              <li>Co-founder, Yeh Center of Natural Medicine</li>
+              <li>Co-founder, Yeh Herbs Manufacturing</li>
+              <li>Co-founder, Natural Medicine International</li>
+            </ul>
           </div>
         </div>
       </div>
