@@ -1,0 +1,36 @@
+# TCM Natural Health
+
+> Education, practitioner network, and resources for Traditional Chinese Medicine — built on the legacy of the late Dr. Timothy Yeh, a pioneer of natural medicine who treated over 500,000 patients across five decades.
+
+TCM Natural Health is a free educational hub for Traditional Chinese Medicine. It offers original articles on TCM foundations, a curated network of trusted U.S. practitioners (launching soon), and a digital library of practical ebooks distilled from Dr. Timothy Yeh's clinical practice.
+
+Dr. Timothy Yeh held a Ph.D. in Acupuncture, was the President of the Yeh Center of Natural Medicine in Upland, California, and was named 2004 Physician of the Year by the Physicians' Advisory Board. His frameworks include the Five Step Model of Systematic Natural Medicine, Causenosis (a 360-point diagnostic method), the Color Value System for foods, and the Coded In Temperature (C.I.T.) system.
+
+## Core pages
+
+- [Home](https://tcmnaturalhealth.com/): Overview of education, practitioners, and resources
+- [Learn](https://tcmnaturalhealth.com/learn.html): TCM education hub with articles by topic
+- [Find a Practitioner](https://tcmnaturalhealth.com/practitioners.html): Curated U.S. TCM practitioner network (launching soon)
+- [Resources](https://tcmnaturalhealth.com/resources.html): Digital ebook library
+
+## Articles
+
+- [Understanding Yin and Yang in Everyday Life](https://tcmnaturalhealth.com/learn/yin-yang-everyday-life.html): The foundational duality of TCM and how to recognize imbalance in your body, energy, sleep, mood, and digestion.
+- [The Five Tastes and the Organs They Heal](https://tcmnaturalhealth.com/learn/five-tastes-organs.html): How sour, bitter, sweet, pungent, and salty each support a specific organ system in TCM.
+- [Why You Wake at 3 AM (And What TCM Says About It)](https://tcmnaturalhealth.com/learn/wake-up-at-3am-tcm.html): The TCM body clock explains why people consistently wake at certain times and what each pattern reveals.
+- [What Actually Happens During an Acupuncture Session?](https://tcmnaturalhealth.com/learn/acupuncture-session-explained.html): What to expect at your first acupuncture visit, including diagnosis, needle placement, and common sensations.
+- [How to Eat in Spring According to TCM](https://tcmnaturalhealth.com/learn/eating-in-spring-tcm.html): Spring is liver season in TCM. Practical guidance on what to eat and reduce, plus a sample week of meals.
+
+## Digital ebooks (paid)
+
+- [The Complete TCM Seasonal Eating Guide ($19.99)](https://tcmnaturalhealth.com/seasonal-eating-guide.html): 70+ pages, 32 recipes. Eating with the four seasons through TCM.
+- [Healing Foods for Digestion & Gut Health ($17.99)](https://tcmnaturalhealth.com/digestion-gut-health.html): The 4 TCM digestive patterns and matching foods.
+- [TCM Food Temperature Guide ($14.99)](https://tcmnaturalhealth.com/food-temperature-guide.html): Dr. Yeh's Coded In Temperature system for matching food to your constitution.
+- [TCM Food Color Guide ($9.99)](https://tcmnaturalhealth.com/food-color-guide.html): The Color Value System for scoring your plate's organ-supporting balance.
+- [Seasonal Eating: An Introduction ($9.99)](https://tcmnaturalhealth.com/seasonal-eating-intro.html): A 16-page primer on TCM seasonal eating.
+
+## About
+
+TCM Natural Health is operated by the Yeh Center of Natural Medicine, Inc., based in Upland, California. The site preserves the work of Dr. Timothy Yeh and Dr. Pearl Yeh, co-founders of the Yeh Center, Yeh Herbs Manufacturing, and Natural Medicine International.
+
+Contact: via the form at https://tcmnaturalhealth.com/#contact
