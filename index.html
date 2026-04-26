@@ -583,22 +583,25 @@
     }
 
     /* PATIENTS */
-    .patients { background: var(--cream); }
+    .patients { background: var(--forest); }
+    .patients .section-label { color: var(--terracotta); }
+    .patients .section-title { color: var(--parchment); }
     .patients-content { max-width: 800px; }
-    .patients-content p { color: var(--umber); margin-bottom: 1rem; font-weight: 300; }
+    .patients-content p { color: rgba(245,237,216,0.78); margin-bottom: 1rem; font-weight: 300; }
+    .patients-content em { color: var(--dusty-rose); }
     .conditions-grid {
       display: flex; flex-wrap: wrap;
       gap: 0.5rem; margin-top: 1.5rem;
     }
     .condition-tag {
-      background: var(--linen);
-      border: 1px solid rgba(163,154,94,0.25);
+      background: rgba(245,237,216,0.06);
+      border: 1px solid rgba(245,237,216,0.2);
       padding: 0.45rem 1.1rem;
       border-radius: 20px;
-      font-size: 0.78rem; color: var(--umber);
+      font-size: 0.78rem; color: var(--parchment);
       letter-spacing: 0.5px; transition: all 0.2s;
     }
-    .condition-tag:hover { border-color: var(--terracotta); color: var(--terracotta); }
+    .condition-tag:hover { border-color: var(--terracotta); color: var(--terracotta); background: rgba(196,113,74,0.08); }
 
     /* CONTACT */
     .contact { background: var(--linen); }
@@ -692,7 +695,7 @@
   <!-- HERO -->
   <section class="hero">
     <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="https://images.unsplash.com/photo-1727060664400-c6751d5db16d?w=1600&auto=format&fit=crop&q=80" aria-hidden="true">
-      <source src="https://videos.pexels.com/video-files/29532362/12712354_1440_2560_30fps.mp4" type="video/mp4">
+      <source src="https://videos.pexels.com/video-files/5480231/5480231-hd_1920_1080_25fps.mp4" type="video/mp4">
     </video>
     <div class="hero-overlay" aria-hidden="true"></div>
     <div class="hero-inner">
