@@ -391,6 +391,10 @@
     .ebook-flagship .ebook-body { padding: 2rem 2.25rem; }
     .ebook-flagship h3 { font-size: 1.5rem; }
     .ebook-flagship p { font-size: 0.95rem; }
+    .ebook-features { list-style: none; margin: 0.5rem 0 1.25rem; padding: 0; columns: 2; column-gap: 1.75rem; }
+    .ebook-features li { font-size: 0.85rem; color: var(--umber); padding: 0.25rem 0 0.25rem 1.4rem; position: relative; font-weight: 300; break-inside: avoid; }
+    .ebook-features li::before { content: '\2713'; position: absolute; left: 0; color: var(--sage); font-weight: 700; }
+    @media (max-width: 540px) { .ebook-features { columns: 1; } }
     @media (max-width: 768px) { .ebook-flagship { flex-direction: column; } .ebook-flagship .ebook-cover { width: 100%; min-height: 180px; height: 180px; } }
     .ebooks-cta { text-align: center; margin-top: 2.5rem; }
     .ebooks-cta a { font-family: var(--font-body); font-size: 0.78rem; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: var(--terracotta); text-decoration: none; border-bottom: 1px solid var(--terracotta); padding-bottom: 2px; transition: opacity 0.2s; }
@@ -650,7 +654,18 @@
           <div class="ebook-body">
             <span class="ebook-tag" style="background: rgba(44,59,45,0.1); color: var(--forest); border-color: rgba(44,59,45,0.3);">Flagship &middot; 70+ Pages &middot; 32 Recipes</span>
             <h3>The Complete TCM Seasonal Eating Guide</h3>
-            <p>Eat in rhythm with the four seasons. Spring, summer, autumn, and winter food lists, recipes, and the Yeh Way for nourishing each organ system.</p>
+            <p>Eat in rhythm with the four seasons. Spring, summer, autumn, and winter food lists, original recipes, and the Yeh Way framework for nourishing each organ system as the year turns.</p>
+            <p style="margin-top: -0.4rem;">A full clinical-grade nutrition manual you can read in an afternoon &mdash; built from Dr. Yeh's 50 years of practice and the principles he used to treat over 500,000 patients.</p>
+            <ul class="ebook-features">
+              <li>The Three Dimensions of Food &amp; Five Tastes</li>
+              <li>Spring foods, recipes &amp; liver support</li>
+              <li>Summer foods, recipes &amp; heart support</li>
+              <li>Autumn foods, recipes &amp; lung support</li>
+              <li>Winter foods, recipes &amp; kidney support</li>
+              <li>The 24 Solar Terms calendar, explained</li>
+              <li>Seasonal transition action plan</li>
+              <li>Year-round neutral food reference</li>
+            </ul>
             <div class="ebook-meta">
               <span class="ebook-price">$19.99</span>
               <span class="ebook-link">Learn more &rarr;</span>
