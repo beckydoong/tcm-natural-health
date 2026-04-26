@@ -582,26 +582,32 @@
       font-weight: 400;
     }
 
-    /* PATIENTS */
-    .patients { background: var(--forest); }
-    .patients .section-label { color: var(--terracotta); }
-    .patients .section-title { color: var(--parchment); }
-    .patients-content { max-width: 800px; }
-    .patients-content p { color: rgba(245,237,216,0.78); margin-bottom: 1rem; font-weight: 300; }
-    .patients-content em { color: var(--dusty-rose); }
-    .conditions-grid {
-      display: flex; flex-wrap: wrap;
-      gap: 0.5rem; margin-top: 1.5rem;
-    }
-    .condition-tag {
+    /* CONDITIONS (dark green) — scoped by ID so it doesn't bleed into the FAQ section that also uses .patients */
+    #patients { background: var(--forest); }
+    #patients .section-label { color: var(--terracotta); }
+    #patients .section-title { color: var(--parchment); }
+    #patients .patients-content p { color: rgba(245,237,216,0.78); }
+    #patients .patients-content em { color: var(--dusty-rose); }
+    #patients .condition-tag {
       background: rgba(245,237,216,0.06);
       border: 1px solid rgba(245,237,216,0.2);
+      color: var(--parchment);
+    }
+    #patients .condition-tag:hover { border-color: var(--terracotta); color: var(--terracotta); background: rgba(196,113,74,0.08); }
+
+    /* Default patients/faq styling (used by FAQ section on linen) */
+    .patients-content { max-width: 800px; }
+    .patients-content p { color: var(--umber); margin-bottom: 1rem; font-weight: 300; }
+    .conditions-grid { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
+    .condition-tag {
+      background: var(--linen);
+      border: 1px solid rgba(163,154,94,0.25);
       padding: 0.45rem 1.1rem;
       border-radius: 20px;
-      font-size: 0.78rem; color: var(--parchment);
+      font-size: 0.78rem; color: var(--umber);
       letter-spacing: 0.5px; transition: all 0.2s;
     }
-    .condition-tag:hover { border-color: var(--terracotta); color: var(--terracotta); background: rgba(196,113,74,0.08); }
+    .condition-tag:hover { border-color: var(--terracotta); color: var(--terracotta); }
 
     /* CONTACT */
     .contact { background: var(--linen); }
