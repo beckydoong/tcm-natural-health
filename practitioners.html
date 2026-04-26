@@ -112,6 +112,11 @@
       line-height: 1.8;
     }
 
+    .hero-photo { padding: 0; background: var(--cream); }
+    .hero-photo-frame { max-width: 1200px; margin: -3rem auto 0; padding: 0 1.5rem; position: relative; z-index: 5; }
+    .hero-photo-frame img { width: 100%; max-height: 420px; object-fit: cover; border-radius: 4px; box-shadow: 0 20px 60px rgba(59,42,26,0.22); display: block; }
+    @media (max-width: 768px) { .hero-photo-frame { margin-top: -2rem; padding: 0 1rem; } .hero-photo-frame img { max-height: 260px; } }
+
     section { padding: 5rem 2rem; }
     .container { max-width: 980px; margin: 0 auto; }
 
@@ -276,6 +281,13 @@
       <div class="hero-badge">Practitioner Network</div>
       <h1>Find a <em>Trusted</em> TCM Practitioner</h1>
       <p>A curated network of acupuncturists and Traditional Chinese Medicine practitioners across the United States — coming soon.</p>
+    </div>
+  </section>
+
+  <!-- HERO PHOTO STRIP -->
+  <section class="hero-photo">
+    <div class="hero-photo-frame">
+      <img src="https://images.unsplash.com/photo-1598555763574-dca77e10427e?w=1200&auto=format&fit=crop&q=80" alt="Acupuncturist's hands holding a fine silver needle in soft light" loading="eager">
     </div>
   </section>
 

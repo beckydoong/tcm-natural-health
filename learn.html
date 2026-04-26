@@ -41,6 +41,11 @@
     .page-hero h1 em { font-style: italic; color: var(--dusty-rose); }
     .page-hero p { font-size: 1.05rem; opacity: 0.78; max-width: 580px; margin: 0 auto; line-height: 1.8; }
 
+    .hero-photo { padding: 0; background: var(--cream); }
+    .hero-photo-frame { max-width: 1200px; margin: -3rem auto 0; padding: 0 1.5rem; position: relative; z-index: 5; }
+    .hero-photo-frame img { width: 100%; max-height: 420px; object-fit: cover; border-radius: 4px; box-shadow: 0 20px 60px rgba(59,42,26,0.22); display: block; }
+    @media (max-width: 768px) { .hero-photo-frame { margin-top: -2rem; padding: 0 1rem; } .hero-photo-frame img { max-height: 260px; } }
+
     section { padding: 5rem 2rem; }
     .container { max-width: 1100px; margin: 0 auto; }
     .section-label { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.25em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 0.75rem; }
@@ -125,6 +130,13 @@
       <div class="hero-badge">Education Hub</div>
       <h1>Learn the <em>Foundations</em> of TCM</h1>
       <p>Free articles drawn from Dr. Timothy Yeh's 50 years of clinical practice — yin and yang, the five elements, foods as medicine, seasonal living, and how acupuncture really works.</p>
+    </div>
+  </section>
+
+  <!-- HERO PHOTO STRIP -->
+  <section class="hero-photo">
+    <div class="hero-photo-frame">
+      <img src="https://images.unsplash.com/photo-1559454473-5956d83259ca?w=1600&auto=format&fit=crop&q=80" alt="Fresh green vegetables and herbs at a spring farmers market" loading="eager">
     </div>
   </section>
 

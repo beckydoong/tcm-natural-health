@@ -303,6 +303,18 @@
 
     .container { max-width: 1100px; margin: 0 auto; }
 
+    /* PHOTO STRIP under hero */
+    .hero-photo { padding: 0; background: var(--cream); }
+    .hero-photo-frame { max-width: 1200px; margin: -3rem auto 0; padding: 0 1.5rem; position: relative; z-index: 5; }
+    .hero-photo-frame img { width: 100%; max-height: 460px; object-fit: cover; border-radius: 4px; box-shadow: 0 20px 60px rgba(59,42,26,0.22); display: block; }
+    @media (max-width: 768px) { .hero-photo-frame { margin-top: -2rem; padding: 0 1rem; } .hero-photo-frame img { max-height: 280px; } }
+
+    /* PILLAR CARD PHOTO HEADERS */
+    .pillar-photo { height: 180px; margin: -2.5rem -2rem 1.5rem; overflow: hidden; border-radius: 4px 4px 0 0; position: relative; }
+    .pillar-photo img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s; }
+    .pillar-card:hover .pillar-photo img { transform: scale(1.05); }
+    .pillar-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(59,42,26,0) 60%, rgba(59,42,26,0.2) 100%); pointer-events: none; }
+
     /* PILLARS */
     .pillars { background: var(--cream); }
     .pillars-intro { text-align: center; max-width: 720px; margin: 0 auto 3rem; }
@@ -355,8 +367,37 @@
       margin-top: auto;
     }
 
+    /* FEATURED EBOOKS */
+    .featured-ebooks { background: var(--linen); }
+    .ebooks-intro { text-align: center; max-width: 720px; margin: 0 auto 3rem; }
+    .ebooks-intro p { color: var(--umber); font-weight: 300; }
+    .ebooks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+    .ebook-card { background: var(--cream); border: 1px solid rgba(163,154,94,0.2); border-radius: 4px; overflow: hidden; transition: all 0.25s; position: relative; text-decoration: none; color: inherit; display: flex; flex-direction: column; }
+    .ebook-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--terracotta); z-index: 2; }
+    .ebook-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(59,42,26,0.1); }
+    .ebook-cover { height: 160px; overflow: hidden; position: relative; }
+    .ebook-cover img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s; }
+    .ebook-card:hover .ebook-cover img { transform: scale(1.05); }
+    .ebook-cover::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(59,42,26,0) 60%, rgba(59,42,26,0.18) 100%); pointer-events: none; }
+    .ebook-body { padding: 1.4rem 1.6rem 1.6rem; flex: 1; display: flex; flex-direction: column; }
+    .ebook-tag { display: inline-block; font-size: 0.6rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; padding: 0.3rem 0.85rem; border-radius: 20px; color: var(--terracotta); background: rgba(196,113,74,0.08); border: 1px solid rgba(196,113,74,0.2); margin-bottom: 0.75rem; align-self: flex-start; }
+    .ebook-card h3 { font-family: var(--font-heading); font-size: 1.2rem; font-weight: 600; color: var(--walnut); margin-bottom: 0.5rem; line-height: 1.3; }
+    .ebook-card p { font-size: 0.88rem; color: var(--umber); margin-bottom: 1rem; flex-grow: 1; }
+    .ebook-meta { display: flex; align-items: center; justify-content: space-between; padding-top: 0.85rem; border-top: 1px solid rgba(163,154,94,0.2); }
+    .ebook-price { font-family: var(--font-heading); font-size: 1.3rem; font-weight: 700; color: var(--terracotta); }
+    .ebook-link { font-size: 0.7rem; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: var(--terracotta); }
+    .ebook-flagship { grid-column: 1 / -1; flex-direction: row; }
+    .ebook-flagship .ebook-cover { width: 36%; height: auto; min-height: 220px; }
+    .ebook-flagship .ebook-body { padding: 2rem 2.25rem; }
+    .ebook-flagship h3 { font-size: 1.5rem; }
+    .ebook-flagship p { font-size: 0.95rem; }
+    @media (max-width: 768px) { .ebook-flagship { flex-direction: column; } .ebook-flagship .ebook-cover { width: 100%; min-height: 180px; height: 180px; } }
+    .ebooks-cta { text-align: center; margin-top: 2.5rem; }
+    .ebooks-cta a { font-family: var(--font-body); font-size: 0.78rem; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: var(--terracotta); text-decoration: none; border-bottom: 1px solid var(--terracotta); padding-bottom: 2px; transition: opacity 0.2s; }
+    .ebooks-cta a:hover { opacity: 0.7; }
+
     /* ABOUT */
-    .about { background: var(--linen); }
+    .about { background: var(--cream); }
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -549,6 +590,13 @@
     </div>
   </section>
 
+  <!-- HERO PHOTO STRIP -->
+  <section class="hero-photo">
+    <div class="hero-photo-frame">
+      <img src="https://images.unsplash.com/photo-1541834167531-0db139a8d22d?w=1600&auto=format&fit=crop&q=80" alt="Balanced stacked stones on a calm rocky shore" loading="eager">
+    </div>
+  </section>
+
   <!-- 3 PILLARS -->
   <section class="pillars">
     <div class="container">
@@ -560,8 +608,8 @@
       <div class="pillars-grid">
 
         <a href="learn.html" class="pillar-card">
-          <div class="pillar-icon pillar-icon-1">
-            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+          <div class="pillar-photo">
+            <img src="https://images.unsplash.com/photo-1504387828636-abeb50778c0c?w=1200&auto=format&fit=crop&q=80" alt="Fresh herbs and spices being poured into a glass mixing bowl" loading="lazy">
           </div>
           <h3>Learn</h3>
           <p>Free articles on yin and yang, the five elements, foods as medicine, and the foundations of natural healing — drawn directly from Dr. Yeh's teachings.</p>
@@ -569,8 +617,8 @@
         </a>
 
         <a href="practitioners.html" class="pillar-card">
-          <div class="pillar-icon pillar-icon-2">
-            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div class="pillar-photo">
+            <img src="https://images.unsplash.com/photo-1598555763574-dca77e10427e?w=1200&auto=format&fit=crop&q=80" alt="Acupuncturist's hands holding a fine silver needle in soft light" loading="lazy">
           </div>
           <h3>Find a Practitioner</h3>
           <p>A curated network of trusted acupuncturists and TCM practitioners across the United States. Every listing carefully vetted in the spirit of the Yeh Way.</p>
@@ -578,14 +626,109 @@
         </a>
 
         <a href="resources.html" class="pillar-card">
-          <div class="pillar-icon pillar-icon-3">
-            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+          <div class="pillar-photo">
+            <img src="https://images.unsplash.com/photo-1685930117878-4b6e76e1de42?w=1200&auto=format&fit=crop&q=80" alt="Colorful rainbow of fresh fruits and vegetables at market" loading="lazy">
           </div>
           <h3>Resources</h3>
           <p>Dr. Yeh's complete digital ebook library — practical guides on seasonal eating, food temperatures, food colors, gut health, and more.</p>
           <span class="pillar-link">Browse ebooks &rarr;</span>
         </a>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED EBOOKS -->
+  <section class="featured-ebooks" id="ebooks">
+    <div class="container">
+      <div class="ebooks-intro">
+        <p class="section-label">Dr. Yeh's Digital Library</p>
+        <h2 class="section-title">Practical guides, ready when you are</h2>
+        <p>Every ebook distills decades of Dr. Yeh's clinical practice into something you can read in an afternoon. Instant PDF download — read on any device.</p>
+      </div>
+
+      <div class="ebooks-grid">
+
+        <!-- Flagship -->
+        <a href="seasonal-eating-guide.html" class="ebook-card ebook-flagship">
+          <div class="ebook-cover">
+            <img src="https://images.unsplash.com/photo-1729577662883-d4095974d4bc?w=1200&auto=format&fit=crop&q=80" alt="Pumpkins arranged on a rustic wooden table for autumn" loading="lazy">
+          </div>
+          <div class="ebook-body">
+            <span class="ebook-tag" style="background: rgba(44,59,45,0.1); color: var(--forest); border-color: rgba(44,59,45,0.3);">Flagship &middot; 70+ Pages &middot; 32 Recipes</span>
+            <h3>The Complete TCM Seasonal Eating Guide</h3>
+            <p>Eat in rhythm with the four seasons. Spring, summer, autumn, and winter food lists, recipes, and the Yeh Way for nourishing each organ system.</p>
+            <div class="ebook-meta">
+              <span class="ebook-price">$19.99</span>
+              <span class="ebook-link">Learn more &rarr;</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="digestion-gut-health.html" class="ebook-card">
+          <div class="ebook-cover">
+            <img src="https://images.unsplash.com/photo-1572171579626-e79450374587?w=1200&auto=format&fit=crop&q=80" alt="Bowl of bone broth with vegetables and herbs" loading="lazy">
+          </div>
+          <div class="ebook-body">
+            <span class="ebook-tag">Bestseller &middot; 64 Pages</span>
+            <h3>Healing Foods for Digestion &amp; Gut Health</h3>
+            <p>The 4 TCM digestive patterns and the foods that match each — to restore balance and reclaim your energy.</p>
+            <div class="ebook-meta">
+              <span class="ebook-price">$17.99</span>
+              <span class="ebook-link">Learn more &rarr;</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="food-temperature-guide.html" class="ebook-card">
+          <div class="ebook-cover">
+            <img src="https://images.unsplash.com/photo-1727060664400-c6751d5db16d?w=1200&auto=format&fit=crop&q=80" alt="Cinnamon sticks and star anise warming spices" loading="lazy">
+          </div>
+          <div class="ebook-body">
+            <span class="ebook-tag">35 Pages</span>
+            <h3>The TCM Food Temperature Guide</h3>
+            <p>Dr. Yeh's Coded In Temperature system. Match foods to your body's needs — hot, warm, neutral, cool, cold.</p>
+            <div class="ebook-meta">
+              <span class="ebook-price">$14.99</span>
+              <span class="ebook-link">Learn more &rarr;</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="food-color-guide.html" class="ebook-card">
+          <div class="ebook-cover">
+            <img src="https://images.unsplash.com/photo-1685930117878-4b6e76e1de42?w=1200&auto=format&fit=crop&q=80" alt="Colorful rainbow of fresh fruits and vegetables at market" loading="lazy">
+          </div>
+          <div class="ebook-body">
+            <span class="ebook-tag">30 Pages</span>
+            <h3>The TCM Food Color Guide</h3>
+            <p>Score your plate with Dr. Yeh's Color Value System. Eat a balanced spectrum of organ-supporting colors daily.</p>
+            <div class="ebook-meta">
+              <span class="ebook-price">$9.99</span>
+              <span class="ebook-link">Learn more &rarr;</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="seasonal-eating-intro.html" class="ebook-card">
+          <div class="ebook-cover">
+            <img src="https://images.unsplash.com/photo-1741517802684-ba07c444a5d2?w=1200&auto=format&fit=crop&q=80" alt="Close-up of fresh ginger root with knobby texture" loading="lazy">
+          </div>
+          <div class="ebook-body">
+            <span class="ebook-tag">Quick Start &middot; 16 Pages</span>
+            <h3>Seasonal Eating: An Introduction</h3>
+            <p>The essential primer on eating with the seasons through TCM. Read it in under an hour and start today.</p>
+            <div class="ebook-meta">
+              <span class="ebook-price">$9.99</span>
+              <span class="ebook-link">Learn more &rarr;</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+
+      <div class="ebooks-cta">
+        <a href="resources.html">Browse the full library &rarr;</a>
       </div>
     </div>
   </section>
