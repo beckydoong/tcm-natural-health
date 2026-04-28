@@ -732,7 +732,13 @@
       .testimonial-grid { grid-template-columns: 1fr; }
       .more-guides-grid { flex-direction: column; align-items: center; }
     }
-  </style>
+      /* Hero photo strip (added) */
+    .hero-photo-strip { padding: 0; background: var(--cream, #FAF3E8); }
+    .hero-photo-frame { max-width: 1200px; margin: -3rem auto 0; padding: 0 1.5rem; position: relative; z-index: 5; }
+    .hero-photo-frame img { width: 100%; max-height: 460px; object-fit: cover; border-radius: 4px; box-shadow: 0 20px 60px rgba(59,42,26,0.22); display: block; }
+    @media (max-width: 768px) { .hero-photo-frame { margin-top: -2rem; padding: 0 1rem; } .hero-photo-frame img { max-height: 280px; } }
+
+</style>
 </head>
 <body>
 
@@ -772,6 +778,14 @@
       <p class="trust-line">Instant PDF download &bull; Read on any device &bull; Lifetime access</p>
     </div>
   </section>
+
+  <!-- HERO PHOTO STRIP -->
+  <section class="hero-photo-strip">
+    <div class="hero-photo-frame">
+      <img src="https://images.unsplash.com/photo-1729577662883-d4095974d4bc?w=1600&auto=format&fit=crop&q=80" alt="Pumpkins and seasonal autumn produce on a rustic wooden table" loading="eager">
+    </div>
+  </section>
+
 
   <!-- PAIN / PROBLEM -->
   <section class="pain">
